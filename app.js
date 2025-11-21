@@ -14,10 +14,9 @@ const maxOfTwoNumbers = (x, y) => {
   } else {
     return y;
   }
-}
+};
 
-console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
-
+console.log("Exercise 1 Result:", maxOfTwoNumbers(3, 9));
 
 /*
 Exercise 2: isAdult()
@@ -30,15 +29,16 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
+function isAdult(age) {
+  if (age >= 18) {
+    console.log("Adult");
+  } else {
+    console.log("minor");
+  }
+  return age;
+}
 
-function isAdult(age){
-    if(age >= 18) {console.log("Adult")}
-else {console.log("minor")};
-return age;
-};
-
-console.log('Exercise 2 Result:', isAdult(21));
-
+console.log("Exercise 2 Result:", isAdult(21));
 
 /*
 Exercise 3: isCharAVowel()
@@ -53,12 +53,21 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
-function isCharAVowel(char){
-    if(char==='a'||char==='e'||char==='i'||char==='o'||char==='u'){return true}
-    else{return false}
+function isCharAVowel(char) {
+  if (
+    char === "a" ||
+    char === "e" ||
+    char === "i" ||
+    char === "o" ||
+    char === "u"
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-console.log('Exercise 3 Result:', isCharAVowel("a"));
+console.log("Exercise 3 Result:", isCharAVowel("a"));
 
 /*
 Exercise 4: generateEmail()
@@ -72,13 +81,10 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 
-
-function generateEmail(name,domain){
-    return name+"@"+domain
-
+function generateEmail(name, domain) {
+  return name + "@" + domain;
 }
-console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
-
+console.log("Exercise 4 Result:", generateEmail("johnsmith", "example.com"));
 
 /*
 Exercise 5: greetUser()
@@ -92,12 +98,11 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-function greetUser(name,time){
-    return "Good "+time+", "+name+"!" 
+function greetUser(name, time) {
+  return "Good " + time + ", " + name + "!";
 }
 
-console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
-
+console.log("Exercise 5 Result:", greetUser("Sam", "morning"));
 
 /*
 Exercise 6: maxOfThree()
@@ -108,18 +113,37 @@ and return the largest among them.
 Example: maxOfThree(17, 4, 9) should return 17.
 
 Complete the exercise in the space below:
+
 */
 
-function maxOfThree(number1,number2,number3){
-    if(number1>=number2 && number1 >= number3){
-        return number1;}
-    else if(number2>=number1 && number2 >=number3){
-        return number2;}
-    else return number3;
-    }
+function maxOfThree(number1, number2, number3) {
+  if (number1 >= number2 && number1 >= number3) {
+    return number1;
+  } else if (number2 >= number1 && number2 >= number3) {
+    return number2;
+  } else return number3;
+}
+
+console.log("Exercise 6 Result:", maxOfThree(5, 10, 8));
+/*
+Exercise 7: calculateTip()
+
+Create a function called calculateTip. It should take two arguments: 
+the bill amount and the tip percentage (as a whole number). 
+The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+
+function calculateTip(bill,tip){ 
+  return bill*tip/100;
+
+}
 
 
-console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
+console.log('Exercise 7 Result:', calculateTip(50, 20));
 
 /*
 Exercise 8: convertTemperature()
@@ -134,23 +158,17 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 
 Complete the exercise in the space below:
 */
-function convertTemperature(temp,unit){
-    if (unit==="C")
-        {
-        return (temp*9/5) + 32
-        }
-    else if(unit==="F")
-        {
-        return (temp - 32) * 5/9;
-        }
-    else 
-        {
-        return "Only scientists use kelvin...or just make sure your C or F is capitalized..."
-        }
-    }
+function convertTemperature(temp, unit) {
+  if (unit === "C") {
+    return (temp * 9) / 5 + 32;
+  } else if (unit === "F") {
+    return ((temp - 32) * 5) / 9;
+  } else {
+    return "Only scientists use kelvin...or just make sure your C or F is capitalized...";
+  }
+}
 
-
-console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+console.log("Exercise 8 Result:", convertTemperature(32, "C"));
 
 /*
 Exercise 9: basicCalculator()
@@ -168,21 +186,19 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-function basicCalculator(number1,number2,sign){
-    if(sign=='+'||sign=="add"){
-        return number1+number2;
-    }
-    else if(sign=='-'||sign=="subtract"){
-        return number1-number2;
-    }
-    else if(sign=='*'||sign=='multiply'||sign=="x")
-        return number1*number2
-    else if(sign=='/'||sign=='divide')
-        return number1/number2
-    else { return "Not sure what you did but it was wrong"}
+function basicCalculator(number1, number2, sign) {
+  if (sign == "+" || sign == "add") {
+    return number1 + number2;
+  } else if (sign == "-" || sign == "subtract") {
+    return number1 - number2;
+  } else if (sign == "*" || sign == "multiply" || sign == "x")
+    return number1 * number2;
+  else if (sign == "/" || sign == "divide") return number1 / number2;
+  else {
+    return "Not sure what you did but it was wrong";
+  }
 }
 
-console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
-
+console.log("Exercise 9 Result:", basicCalculator(10, 5, "subtract"));
 
 // This was fun //
